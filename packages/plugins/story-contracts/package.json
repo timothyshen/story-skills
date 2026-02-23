@@ -1,0 +1,8 @@
+{
+  "name": "@story-protocol/story-contracts",
+  "version": "0.0.1",
+  "description": "AI-powered assistance for Story Protocol Solidity smart contract interaction",
+  "author": "Story Protocol <ai@story.foundation>",
+  "license": "MIT",
+  "files": [".claude-plugin", "skills", "docs"]
+}
