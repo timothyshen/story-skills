@@ -1,0 +1,13 @@
+{
+  "name": "story-licensing",
+  "version": "1.0.0",
+  "description": "AI-powered assistance for Story Protocol licensing, PIL terms configuration, and derivative IP registration",
+  "author": {
+    "name": "Story Protocol",
+    "email": "ai@story.foundation"
+  },
+  "homepage": "https://github.com/storyprotocol/story-skills",
+  "keywords": ["story-protocol", "licensing", "pil", "derivatives", "ip", "blockchain"],
+  "license": "MIT",
+  "skills": ["./skills/licensing"]
+}

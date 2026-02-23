@@ -1,0 +1,8 @@
+{
+  "name": "@story-protocol/story-sdk",
+  "version": "0.0.1",
+  "description": "AI-powered assistance for Story Protocol TypeScript SDK setup and usage",
+  "author": "Story Protocol <ai@story.foundation>",
+  "license": "MIT",
+  "files": [".claude-plugin", "skills", "docs"]
+}

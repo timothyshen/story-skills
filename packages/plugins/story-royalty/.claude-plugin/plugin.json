@@ -1,0 +1,13 @@
+{
+  "name": "story-royalty",
+  "version": "1.0.0",
+  "description": "AI-powered assistance for Story Protocol royalty payments, revenue claiming, and IP Royalty Vault management",
+  "author": {
+    "name": "Story Protocol",
+    "email": "ai@story.foundation"
+  },
+  "homepage": "https://github.com/storyprotocol/story-skills",
+  "keywords": ["story-protocol", "royalty", "revenue", "vault", "ip", "blockchain"],
+  "license": "MIT",
+  "skills": ["./skills/royalty-integration"]
+}
