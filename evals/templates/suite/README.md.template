@@ -1,0 +1,17 @@
+# {{SKILL_NAME}} Eval Suite
+
+Evaluation suite for the `{{SKILL_NAME}}` skill in the `{{PLUGIN_NAME}}` plugin.
+
+## Running
+
+```bash
+npx promptfoo eval -c evals/suites/{{SKILL_NAME}}/promptfoo.yaml
+```
+
+## Cases
+
+<!-- List test cases here -->
+
+## Rubrics
+
+<!-- List rubrics here -->

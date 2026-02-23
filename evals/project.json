@@ -1,0 +1,19 @@
+{
+  "name": "evals",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "evals",
+  "projectType": "library",
+  "tags": ["type:evals"],
+  "targets": {
+    "eval-suite:ip-registration": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx promptfoo eval -c evals/suites/ip-registration/promptfoo.yaml"
+      },
+      "inputs": [
+        "evals/suites/ip-registration/**/*",
+        "packages/plugins/story-ip/skills/ip-registration/**/*"
+      ]
+    }
+  }
+}

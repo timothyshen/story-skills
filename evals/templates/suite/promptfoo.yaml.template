@@ -1,0 +1,26 @@
+description: '{{SKILL_NAME}} Skill Evaluation'
+
+prompts:
+  - file://prompt-wrapper.txt
+
+providers:
+  - id: anthropic:claude-sonnet-4-5-20250929
+    config:
+      temperature: 0
+      max_tokens: 4096
+
+defaultTest:
+  options:
+    timeout: 120000
+  vars:
+    skill_content: file://../../../packages/plugins/{{PLUGIN_NAME}}/skills/{{SKILL_NAME}}/SKILL.md
+
+tests:
+  # Add test cases here
+  # - vars:
+  #     case_content: file://cases/example.md
+  #   assert:
+  #     - type: llm-rubric
+  #       value: file://rubrics/example.txt
+  #       threshold: 0.85
+  #       provider: anthropic:claude-sonnet-4-5-20250929

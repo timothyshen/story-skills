@@ -1,0 +1,13 @@
+description: 'Story Protocol AI Plugin Evaluations'
+
+providers:
+  - id: anthropic:claude-sonnet-4-5-20250929
+    config:
+      temperature: 0
+
+evaluateOptions:
+  showCost: true
+
+defaultTest:
+  options:
+    timeout: 120000
