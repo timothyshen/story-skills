@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. ipId is NOT tokenId: Clearly states ipId is the IP Account contract address, derived deterministically, not the ERC-721 token ID
+2. ERC-6551: Mentions ipId is an ERC-6551 Token Bound Account
+3. Derivation: Shows or explains ipId = IPAssetRegistry.ipId(chainId, tokenContract, tokenId)
+4. Distinction: Makes it clear these are fundamentally different things (address vs uint256)
+5. Practical usage: Shows how to get ipId from registration response or compute it
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

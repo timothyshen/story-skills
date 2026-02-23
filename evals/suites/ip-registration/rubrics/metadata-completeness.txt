@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Two metadata types: Clearly distinguishes IP metadata (IPA standard) from NFT metadata (ERC-721/OpenSea standard)
+2. IP metadata fields: Mentions key fields (title, description, creators, image, ipType)
+3. NFT metadata fields: Mentions standard fields (name, description, image, attributes)
+4. Hashing: Explains SHA-256 hashing with 0x prefix for ipMetadataHash and nftMetadataHash
+5. IPFS upload: Mentions uploading both metadata objects to IPFS
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

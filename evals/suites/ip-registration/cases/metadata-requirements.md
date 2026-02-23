@@ -1,0 +1,1 @@
+I'm registering an IP Asset on Story Protocol. What metadata do I need to provide? I'm confused about the difference between IP metadata and NFT metadata. Can you explain both formats and how to hash them correctly?

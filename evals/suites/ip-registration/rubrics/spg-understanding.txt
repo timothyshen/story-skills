@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. SPG explanation: Explains SPG bundles mint + register into one transaction
+2. Collection requirement: Mentions need for an SPG NFT collection (create or use existing)
+3. Correct method: Uses registerIpAsset with nft.type 'mint' and spgNftContract
+4. Public testnet option: Mentions public testnet collection 0xc32A8a0FF3beDDDa58393d022aF433e78739FAbc or createNFTCollection
+5. Ownership: Mentions minting rights requirement or isPublicMinting flag
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

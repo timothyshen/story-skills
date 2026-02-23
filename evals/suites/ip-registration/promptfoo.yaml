@@ -1,0 +1,80 @@
+description: 'IP Registration Skill Evaluation'
+
+prompts:
+  - file://prompt-wrapper.txt
+
+providers:
+  - id: anthropic:claude-sonnet-4-5-20250929
+    config:
+      temperature: 0
+      max_tokens: 4096
+
+defaultTest:
+  options:
+    timeout: 120000
+  vars:
+    skill_content: file://../../../packages/plugins/story-ip/skills/ip-registration/SKILL.md
+    contract_addresses: file://../../../packages/plugins/story-ip/skills/ip-registration/references/contract-addresses.md
+    metadata_standard: file://../../../packages/plugins/story-ip/skills/ip-registration/references/metadata-standard.md
+    registration_patterns: file://../../../packages/plugins/story-ip/skills/ip-registration/references/registration-patterns.md
+
+tests:
+  - vars:
+      case_content: file://cases/basic-registration.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/registration-correctness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'IPAssetRegistry'
+      - type: contains
+        value: 'ipId'
+
+  - vars:
+      case_content: file://cases/spg-mint-and-register.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/spg-understanding.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains-any
+        value: ['mintAndRegisterIp', 'registerIpAsset']
+      - type: contains
+        value: 'spgNftContract'
+
+  - vars:
+      case_content: file://cases/metadata-requirements.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/metadata-completeness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'ipMetadataHash'
+      - type: contains-any
+        value: ['SHA-256', 'sha256', 'sha-256']
+
+  - vars:
+      case_content: file://cases/create-collection.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/registration-correctness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'createNFTCollection'
+      - type: contains
+        value: 'spgNftContract'
+
+  - vars:
+      case_content: file://cases/ipid-derivation.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/pitfall-awareness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'ipId'
+      - type: not-contains
+        value: 'tokenId is the ipId'

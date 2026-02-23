@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Correct SDK method: Uses client.ipAsset.registerIpAsset() (not deprecated methods)
+2. Correct nft parameter: Uses type 'minted' for existing NFTs or type 'mint' for SPG
+3. Correct contract reference: IPAssetRegistry at 0x77319B4031e6eF1250907aa00018B8B1c67a244b
+4. Metadata object: Includes ipMetadata with ipMetadataURI, ipMetadataHash, nftMetadataURI, nftMetadataHash
+5. Output handling: Mentions response.ipId and response.txHash
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3
