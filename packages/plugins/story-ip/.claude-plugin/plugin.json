@@ -1,0 +1,13 @@
+{
+  "name": "story-ip",
+  "version": "1.0.0",
+  "description": "AI-powered assistance for Story Protocol IP Asset registration, metadata management, and SPG workflows",
+  "author": {
+    "name": "Story Protocol",
+    "email": "ai@story.foundation"
+  },
+  "homepage": "https://github.com/storyprotocol/story-skills",
+  "keywords": ["story-protocol", "ip-asset", "nft", "registration", "spg", "blockchain"],
+  "license": "MIT",
+  "skills": ["./skills/ip-registration"]
+}
