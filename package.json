@@ -1,0 +1,29 @@
+{
+  "name": "story-skills",
+  "version": "0.0.0",
+  "private": true,
+  "description": "AI-powered skills and plugins for Story Protocol",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "packages/plugins/*"
+  ],
+  "scripts": {
+    "validate": "nx run-many -t validate",
+    "lint": "nx run-many -t lint-markdown",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "nx": "^20.0.0",
+    "markdownlint-cli2": "^0.17.0",
+    "prettier": "^3.4.0",
+    "vitepress": "^1.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "packageManager": "npm@11.0.0"
+}
