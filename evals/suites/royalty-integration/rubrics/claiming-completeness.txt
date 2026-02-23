@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. claimAllRevenue method: Shows client.royalty.claimAllRevenue() with ancestorIpId, claimer, childIpIds, royaltyPolicies, and currencyTokens
+2. Batch claiming: Mentions client.royalty.batchClaimAllRevenue() for claiming across multiple ancestor IPs in one transaction
+3. Permissionless claiming: Explains that anyone can call claimAllRevenue for any IP — the claimer parameter determines who receives tokens
+4. Claim options: Shows autoTransferAllClaimedTokensFromIp and autoUnwrapIpTokens options
+5. Policy array matching: Mentions that royaltyPolicies must match 1:1 with childIpIds (each child needs its correct LAP or LRP address)
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

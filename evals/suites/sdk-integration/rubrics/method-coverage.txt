@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. IP Asset module: Lists client.ipAsset with key methods (registerIpAsset, registerDerivativeIpAsset, linkDerivative)
+2. License module: Lists client.license with key methods (attachLicenseTerms, mintLicenseTokens, registerPILTerms or similar)
+3. Royalty module: Lists client.royalty with key methods (payRoyaltyOnBehalf, claimAllRevenue)
+4. Additional modules: Mentions at least 3 of: client.dispute, client.nftClient, client.groupClient, client.wipClient, client.ipAccountClient, client.permissionClient
+5. Module accessor pattern: Shows that modules are accessed as properties on the StoryClient instance (e.g., client.ipAsset, client.license)
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

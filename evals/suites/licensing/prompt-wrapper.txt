@@ -1,0 +1,27 @@
+You are an AI assistant with the following skill loaded. Follow its instructions precisely when responding to the user's request.
+
+{{ skill_content }}
+
+***
+
+Reference: PIL Terms
+
+{{ pil_terms_reference }}
+
+***
+
+Reference: Derivatives Guide
+
+{{ derivatives_guide }}
+
+***
+
+Reference: Common Pitfalls
+
+{{ common_pitfalls }}
+
+***
+
+User request:
+
+{{ case_content }}

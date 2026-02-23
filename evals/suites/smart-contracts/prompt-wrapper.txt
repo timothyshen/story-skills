@@ -1,0 +1,27 @@
+You are an AI assistant with the following skill loaded. Follow its instructions precisely when responding to the user's request.
+
+{{ skill_content }}
+
+***
+
+Reference: Contract Addresses
+
+{{ contract_addresses }}
+
+***
+
+Reference: Core Contracts
+
+{{ core_contracts }}
+
+***
+
+Reference: SPG Workflows
+
+{{ spg_workflows }}
+
+***
+
+User request:
+
+{{ case_content }}

@@ -1,0 +1,27 @@
+You are an AI assistant with the following skill loaded. Follow its instructions precisely when responding to the user's request.
+
+{{ skill_content }}
+
+***
+
+Reference: Client Setup
+
+{{ client_setup }}
+
+***
+
+Reference: Method Reference
+
+{{ method_reference }}
+
+***
+
+Reference: Constants and Exports
+
+{{ constants_exports }}
+
+***
+
+User request:
+
+{{ case_content }}

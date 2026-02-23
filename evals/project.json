@@ -14,6 +14,46 @@
         "evals/suites/ip-registration/**/*",
         "packages/plugins/story-ip/skills/ip-registration/**/*"
       ]
+    },
+    "eval-suite:licensing": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx promptfoo eval -c evals/suites/licensing/promptfoo.yaml"
+      },
+      "inputs": [
+        "evals/suites/licensing/**/*",
+        "packages/plugins/story-licensing/skills/licensing/**/*"
+      ]
+    },
+    "eval-suite:royalty-integration": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx promptfoo eval -c evals/suites/royalty-integration/promptfoo.yaml"
+      },
+      "inputs": [
+        "evals/suites/royalty-integration/**/*",
+        "packages/plugins/story-royalty/skills/royalty-integration/**/*"
+      ]
+    },
+    "eval-suite:sdk-integration": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx promptfoo eval -c evals/suites/sdk-integration/promptfoo.yaml"
+      },
+      "inputs": [
+        "evals/suites/sdk-integration/**/*",
+        "packages/plugins/story-sdk/skills/sdk-integration/**/*"
+      ]
+    },
+    "eval-suite:smart-contracts": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx promptfoo eval -c evals/suites/smart-contracts/promptfoo.yaml"
+      },
+      "inputs": [
+        "evals/suites/smart-contracts/**/*",
+        "packages/plugins/story-contracts/skills/smart-contracts/**/*"
+      ]
     }
   }
 }

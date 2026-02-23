@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Fork command: Shows forge test --fork-url https://aeneid.storyrpc.io/ for fork testing against Aeneid testnet
+2. Boilerplate repo: References the official boilerplate at https://github.com/storyprotocol/story-protocol-boilerplate
+3. Test setup: Shows a test contract extending forge-std/Test.sol with contract address constants
+4. Contract constants: Defines immutable/constant references for IPAssetRegistry, LicensingModule, PILicenseTemplate using correct addresses
+5. Test utilities: Uses Foundry test helpers like makeAddr(), vm.deal(), vm.prank(), or vm.startPrank()
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

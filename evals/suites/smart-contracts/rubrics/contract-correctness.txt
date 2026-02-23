@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Correct address: Uses IPAssetRegistry at 0x77319B4031e6eF1250907aa00018B8B1c67a244b
+2. Register function: Shows IPAssetRegistry.register(chainid, tokenContract, tokenId) with correct signature
+3. Import path: Uses correct import from @story-protocol/core/registries/IPAssetRegistry.sol
+4. ipId return: Explains that register() returns the ipId (IP Account address, an ERC-6551 TBA)
+5. Helper functions: Mentions ipId() view function for deriving ipId without a transaction or isRegistered() check
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

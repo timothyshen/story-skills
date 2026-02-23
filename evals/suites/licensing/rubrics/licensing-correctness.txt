@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Correct SDK method: Uses client.license.attachLicenseTerms() or registerPilTermsAndAttach() or registerCommercialUsePIL/registerCommercialRemixPIL
+2. PIL terms reference: Mentions PILicenseTemplate at 0x2E896b0b2Fdb7457499B56AAaA4AE55BCB4Cd316 or PILFlavor helpers
+3. License terms fields: Shows key fields like commercialUse, derivativesAllowed, commercialRevShare, currency
+4. WIP token: References WIP_TOKEN_ADDRESS or 0x1514000000000000000000000000000000000000 as payment currency
+5. Output handling: Mentions response.licenseTermsId or response.txHash
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

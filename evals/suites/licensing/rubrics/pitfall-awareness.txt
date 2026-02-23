@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. commercialRevShare encoding: Explains that the SDK takes 0-100 (human-readable) and the contract stores 0-100,000,000, and that you should NOT pass 10,000,000 to the SDK for 10%
+2. Pre-registered ID=1: Mentions that Non-Commercial Social Remixing is already registered as licenseTermsId=1 on both networks and should not be re-registered
+3. Response checking: Warns that attachLicenseTerms returns response.success=false if already attached and does NOT throw
+4. Currency whitelisting: Mentions that currency must be whitelisted (WIP or MERC20 on testnet)
+5. Royalty policy address: References RoyaltyPolicyLAP or RoyaltyPolicyLRP addresses for commercial licenses
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

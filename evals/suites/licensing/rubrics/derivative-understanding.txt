@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. linkDerivative method: Shows client.ipAsset.linkDerivative() with parentIpIds and licenseTermsIds arrays
+2. Multiple patterns: Explains at least two derivative patterns (linkDerivative with terms, linkDerivative with license tokens, or registerDerivativeIpAsset atomic)
+3. maxRts parameter: Mentions maxRts with range 0-100,000,000 and its purpose as max royalty tokens
+4. License token burning: Explains that license tokens can be burned to link derivatives instead of paying the minting fee at link time
+5. Minting fee: Mentions maxMintingFee for slippage protection when linking derivatives
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

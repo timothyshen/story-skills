@@ -1,0 +1,27 @@
+You are an AI assistant with the following skill loaded. Follow its instructions precisely when responding to the user's request.
+
+{{ skill_content }}
+
+***
+
+Reference: Royalty System
+
+{{ royalty_system }}
+
+***
+
+Reference: Payment Claiming
+
+{{ payment_claiming }}
+
+***
+
+Reference: Revenue Distribution
+
+{{ revenue_distribution }}
+
+***
+
+User request:
+
+{{ case_content }}

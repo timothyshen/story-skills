@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. WIP_TOKEN_ADDRESS: Mentions the WIP token address constant (0x1514000000000000000000000000000000000000)
+2. PILFlavor: Mentions PILFlavor helper with its preset methods (nonCommercialSocialRemixing, commercialUse, commercialRemix)
+3. LicenseTerms type: Mentions the LicenseTerms TypeScript type for license configuration
+4. Chain objects: Mentions the exported chain configuration objects (aeneid, mainnet) with their chain IDs
+5. Additional exports: Lists at least 2 of: royaltySharesTotalSupply, MAX_ROYALTY_TOKEN, convertCIDtoHashIPFS, getPermissionSignature, defaultFunctionSelector
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

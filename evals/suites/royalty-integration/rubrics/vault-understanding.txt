@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Token distribution: Explains that each vault holds exactly 100 Royalty Tokens where each token = 1% of revenue rights (100 tokens = 100%)
+2. Auto-deployment: Explains that vaults are auto-deployed when the first license token is minted or a derivative is registered (not manually deployed)
+3. Tokens in IP Account: Warns that on deployment, all 100 royalty tokens go to the IP Account (ERC-6551 TBA), NOT to the owner's wallet
+4. Vault address: Mentions getRoyaltyVaultAddress and that the vault address IS the ERC-20 token contract for royalty tokens
+5. Token transfer: Explains that to receive revenue, you must transfer royalty tokens from the IP Account to your wallet
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

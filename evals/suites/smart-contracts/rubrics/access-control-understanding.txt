@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Permission table: Explains the 3D permission model (ipAccount, signer, target) mapping to permission values (0=ABSTAIN, 1=ALLOW, 2=DENY)
+2. setPermission call: Shows AccessController.setPermission(ipAccount, signer, to, func, permission) with correct parameters
+3. Wildcards: Explains address(0) for any module/target and bytes4(0) for any function selector
+4. Resolution order: Describes permission resolution from specific to wildcard: (ip, signer, module, func) -> (ip, signer, module, bytes4(0)) -> (ip, signer, address(0), bytes4(0)) -> DENY
+5. Owner requirement: States that only the IP Account owner (NFT holder) can call setPermission
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

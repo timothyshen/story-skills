@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Installation: Shows npm install @story-protocol/core-sdk viem (both packages required)
+2. Client creation: Uses StoryClient.newClient(config) with a StoryConfig object
+3. Config fields: Shows account (from privateKeyToAccount), transport (from viem http()), and chainId ('aeneid' or 'mainnet')
+4. Chain options: Mentions available chains — 'aeneid' for testnet (chain 1315) and 'mainnet' (chain 1514) with their RPC URLs
+5. Environment pattern: Shows privateKeyToAccount with 0x prefix from process.env.WALLET_PRIVATE_KEY
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3

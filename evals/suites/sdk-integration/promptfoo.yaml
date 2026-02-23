@@ -1,0 +1,56 @@
+description: 'SDK Integration Skill Evaluation'
+
+prompts:
+  - file://prompt-wrapper.txt
+
+providers:
+  - id: anthropic:claude-sonnet-4-5-20250929
+    config:
+      temperature: 0
+      max_tokens: 4096
+
+defaultTest:
+  options:
+    timeout: 120000
+  vars:
+    skill_content: file://../../../packages/plugins/story-sdk/skills/sdk-integration/SKILL.md
+    client_setup: file://../../../packages/plugins/story-sdk/skills/sdk-integration/references/client-setup.md
+    method_reference: file://../../../packages/plugins/story-sdk/skills/sdk-integration/references/method-reference.md
+    constants_exports: file://../../../packages/plugins/story-sdk/skills/sdk-integration/references/constants-exports.md
+
+tests:
+  - vars:
+      case_content: file://cases/client-initialization.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/setup-correctness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'StoryClient.newClient'
+      - type: contains
+        value: 'StoryConfig'
+
+  - vars:
+      case_content: file://cases/available-methods.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/method-coverage.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'client.ipAsset'
+      - type: contains
+        value: 'client.license'
+
+  - vars:
+      case_content: file://cases/key-exports.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/export-awareness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'WIP_TOKEN_ADDRESS'
+      - type: contains
+        value: 'PILFlavor'

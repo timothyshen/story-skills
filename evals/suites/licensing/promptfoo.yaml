@@ -1,0 +1,68 @@
+description: 'Licensing Skill Evaluation'
+
+prompts:
+  - file://prompt-wrapper.txt
+
+providers:
+  - id: anthropic:claude-sonnet-4-5-20250929
+    config:
+      temperature: 0
+      max_tokens: 4096
+
+defaultTest:
+  options:
+    timeout: 120000
+  vars:
+    skill_content: file://../../../packages/plugins/story-licensing/skills/licensing/SKILL.md
+    pil_terms_reference: file://../../../packages/plugins/story-licensing/skills/licensing/references/pil-terms-reference.md
+    derivatives_guide: file://../../../packages/plugins/story-licensing/skills/licensing/references/derivatives-guide.md
+    common_pitfalls: file://../../../packages/plugins/story-licensing/skills/licensing/references/common-pitfalls.md
+
+tests:
+  - vars:
+      case_content: file://cases/attach-license-terms.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/licensing-correctness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'attachLicenseTerms'
+      - type: contains
+        value: 'PILicenseTemplate'
+
+  - vars:
+      case_content: file://cases/register-derivative.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/derivative-understanding.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains-any
+        value: ['linkDerivative', 'registerDerivativeIpAsset']
+      - type: contains
+        value: 'parentIpIds'
+
+  - vars:
+      case_content: file://cases/pil-flavors.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/licensing-correctness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'PILFlavor'
+      - type: contains
+        value: 'commercialRemix'
+
+  - vars:
+      case_content: file://cases/revshare-configuration.md
+    assert:
+      - type: llm-rubric
+        value: file://rubrics/pitfall-awareness.txt
+        threshold: 0.85
+        provider: anthropic:claude-sonnet-4-5-20250929
+      - type: contains
+        value: 'commercialRevShare'
+      - type: contains
+        value: 'WIP_TOKEN_ADDRESS'

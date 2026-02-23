@@ -1,0 +1,14 @@
+Required Elements (Must Include):
+
+1. Correct SDK method: Uses client.royalty.payRoyaltyOnBehalf() with receiverIpId, payerIpId, token, and amount parameters
+2. WIP token: References WIP_TOKEN_ADDRESS from @story-protocol/core-sdk or address 0x1514000000000000000000000000000000000000
+3. External payer pattern: Uses zeroAddress for payerIpId when paying from a non-IP wallet
+4. Amount format: Uses parseEther() or BigInt for the amount in wei
+5. wipOptions: Shows wipOptions with useNativeTokens for paying with native IP tokens
+
+Scoring Guide:
+- 5/5 elements correct: 1.0
+- 4/5: 0.85
+- 3/5: 0.7
+- 2/5: 0.5
+- 1/5 or less: 0.3
