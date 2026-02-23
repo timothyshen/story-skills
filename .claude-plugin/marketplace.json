@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "story-ip",
+      "path": "packages/plugins/story-ip",
+      "description": "AI-powered assistance for Story Protocol IP Asset registration and metadata"
+    },
+    {
+      "name": "story-licensing",
+      "path": "packages/plugins/story-licensing",
+      "description": "AI-powered assistance for Story Protocol licensing and derivatives"
+    },
+    {
+      "name": "story-royalty",
+      "path": "packages/plugins/story-royalty",
+      "description": "AI-powered assistance for Story Protocol royalty payments and revenue"
+    },
+    {
+      "name": "story-sdk",
+      "path": "packages/plugins/story-sdk",
+      "description": "AI-powered assistance for Story Protocol TypeScript SDK integration"
+    },
+    {
+      "name": "story-contracts",
+      "path": "packages/plugins/story-contracts",
+      "description": "AI-powered assistance for Story Protocol Solidity smart contract interaction"
+    }
+  ]
+}
