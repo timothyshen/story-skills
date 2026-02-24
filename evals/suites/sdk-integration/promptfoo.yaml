@@ -13,10 +13,10 @@ defaultTest:
   options:
     timeout: 120000
   vars:
-    skill_content: file://../../../packages/plugins/story-sdk/skills/sdk-integration/SKILL.md
-    client_setup: file://../../../packages/plugins/story-sdk/skills/sdk-integration/references/client-setup.md
-    method_reference: file://../../../packages/plugins/story-sdk/skills/sdk-integration/references/method-reference.md
-    constants_exports: file://../../../packages/plugins/story-sdk/skills/sdk-integration/references/constants-exports.md
+    skill_content: file://../../../story-sdk/sdk-integration/SKILL.md
+    client_setup: file://../../../story-sdk/sdk-integration/references/client-setup.md
+    method_reference: file://../../../story-sdk/sdk-integration/references/method-reference.md
+    constants_exports: file://../../../story-sdk/sdk-integration/references/constants-exports.md
 
 tests:
   - vars:

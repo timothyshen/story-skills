@@ -13,10 +13,10 @@ defaultTest:
   options:
     timeout: 120000
   vars:
-    skill_content: file://../../../packages/plugins/story-contracts/skills/smart-contracts/SKILL.md
-    contract_addresses: file://../../../packages/plugins/story-contracts/skills/smart-contracts/references/contract-addresses.md
-    core_contracts: file://../../../packages/plugins/story-contracts/skills/smart-contracts/references/core-contracts.md
-    spg_workflows: file://../../../packages/plugins/story-contracts/skills/smart-contracts/references/spg-workflows.md
+    skill_content: file://../../../story-contracts/SKILL.md
+    contract_addresses: file://../../../story-contracts/references/contract-addresses.md
+    core_contracts: file://../../../story-contracts/references/core-contracts.md
+    spg_workflows: file://../../../story-contracts/references/spg-workflows.md
 
 tests:
   - vars:

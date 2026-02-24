@@ -12,7 +12,7 @@
       },
       "inputs": [
         "evals/suites/ip-registration/**/*",
-        "packages/plugins/story-ip/skills/ip-registration/**/*"
+        "story-sdk/ip-registration/**/*"
       ]
     },
     "eval-suite:licensing": {
@@ -22,7 +22,7 @@
       },
       "inputs": [
         "evals/suites/licensing/**/*",
-        "packages/plugins/story-licensing/skills/licensing/**/*"
+        "story-sdk/licensing/**/*"
       ]
     },
     "eval-suite:royalty-integration": {
@@ -32,7 +32,7 @@
       },
       "inputs": [
         "evals/suites/royalty-integration/**/*",
-        "packages/plugins/story-royalty/skills/royalty-integration/**/*"
+        "story-sdk/royalty-integration/**/*"
       ]
     },
     "eval-suite:sdk-integration": {
@@ -42,7 +42,7 @@
       },
       "inputs": [
         "evals/suites/sdk-integration/**/*",
-        "packages/plugins/story-sdk/skills/sdk-integration/**/*"
+        "story-sdk/sdk-integration/**/*"
       ]
     },
     "eval-suite:smart-contracts": {
@@ -52,7 +52,7 @@
       },
       "inputs": [
         "evals/suites/smart-contracts/**/*",
-        "packages/plugins/story-contracts/skills/smart-contracts/**/*"
+        "story-contracts/**/*"
       ]
     }
   }

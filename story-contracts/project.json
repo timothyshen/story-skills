@@ -1,0 +1,21 @@
+{
+  "name": "story-contracts",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "story-contracts",
+  "projectType": "library",
+  "tags": ["type:skill-package", "scope:story-protocol"],
+  "targets": {
+    "lint-markdown": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx markdownlint-cli2 'story-contracts/**/*.md'"
+      }
+    },
+    "validate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node scripts/validate-skill-package.cjs story-contracts"
+      }
+    }
+  }
+}

@@ -13,10 +13,10 @@ defaultTest:
   options:
     timeout: 120000
   vars:
-    skill_content: file://../../../packages/plugins/story-licensing/skills/licensing/SKILL.md
-    pil_terms_reference: file://../../../packages/plugins/story-licensing/skills/licensing/references/pil-terms-reference.md
-    derivatives_guide: file://../../../packages/plugins/story-licensing/skills/licensing/references/derivatives-guide.md
-    common_pitfalls: file://../../../packages/plugins/story-licensing/skills/licensing/references/common-pitfalls.md
+    skill_content: file://../../../story-sdk/licensing/SKILL.md
+    pil_terms_reference: file://../../../story-sdk/licensing/references/pil-terms-reference.md
+    derivatives_guide: file://../../../story-sdk/licensing/references/derivatives-guide.md
+    common_pitfalls: file://../../../story-sdk/licensing/references/common-pitfalls.md
 
 tests:
   - vars:

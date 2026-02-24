@@ -1,0 +1,8 @@
+{
+  "name": "@story-protocol/story-sdk",
+  "version": "0.1.0",
+  "description": "AI skills for Story Protocol TypeScript SDK development",
+  "author": "Story Protocol <ai@story.foundation>",
+  "license": "MIT",
+  "files": ["SKILL.md", "sdk-integration", "ip-registration", "licensing", "royalty-integration"]
+}

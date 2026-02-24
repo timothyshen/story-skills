@@ -13,7 +13,7 @@ defaultTest:
   options:
     timeout: 120000
   vars:
-    skill_content: file://../../../packages/plugins/{{PLUGIN_NAME}}/skills/{{SKILL_NAME}}/SKILL.md
+    skill_content: file://../../../{{SKILL_PATH}}/SKILL.md
 
 tests:
   # Add test cases here
