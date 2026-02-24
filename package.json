@@ -17,9 +17,9 @@
   },
   "devDependencies": {
     "nx": "^20.0.0",
-    "markdownlint-cli2": "^0.17.0",
+    "markdownlint-cli2": "^0.21.0",
     "prettier": "^3.4.0",
-    "vitepress": "^1.5.0"
+    "vitepress": "^1.6.4"
   },
   "engines": {
     "node": ">=18.0.0",
