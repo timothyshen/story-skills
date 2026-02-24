@@ -2,45 +2,69 @@
 
 ## Overview
 
-AI-powered skills and plugins for Story Protocol development. This monorepo contains
-plugins for IP registration, licensing, royalties, SDK usage, and smart contract interaction.
+AI-powered skills for Story Protocol development. This monorepo contains
+two marketplace skill packages: SDK (TypeScript) and Contracts (Solidity).
 
 ## Nx Usage
 
 All operations go through Nx:
 
-- Validate all plugins: `npx nx run-many -t validate`
+- Validate all packages: `npx nx run-many -t validate`
 - Lint markdown: `npx nx run-many -t lint-markdown`
-- Validate specific plugin: `npx nx run story-ip:validate`
+- Validate specific package: `npx nx run story-sdk:validate`
 - Run eval suite: `npx promptfoo eval -c evals/suites/<skill-name>/promptfoo.yaml`
 
 ## Package Scope
 
 All packages use the `@story-protocol` scope.
 
-## Plugin Architecture
+## Skill Package Architecture
 
-Each plugin lives at `packages/plugins/<plugin-name>/` and contains:
-- `.claude-plugin/plugin.json` — plugin manifest (name, version, description, skills[])
-- `skills/<skill-name>/SKILL.md` — skill instructions with YAML frontmatter
-- `skills/<skill-name>/references/` — supplementary reference docs
+Two top-level skill packages for the skills.sh marketplace:
+
+### story-sdk/ (TypeScript SDK)
+
+Contains 4 sub-skills plus an umbrella SKILL.md:
+- `SKILL.md` — umbrella (setup + routing to sub-skills)
+- `sdk-integration/SKILL.md` — SDK methods, client modules, usage patterns
+- `ip-registration/SKILL.md` — IP Asset registration, metadata, SPG workflows
+- `licensing/SKILL.md` — PIL license terms, derivatives, license tokens
+- `royalty-integration/SKILL.md` — Royalty vaults, revenue claiming, payments
+
+### story-contracts/ (Solidity)
+
+Single skill for smart contract interaction:
+- `SKILL.md` — Solidity contracts, Foundry testing, direct contract calls
+
+### Structure
+
+Each skill package contains:
+- `SKILL.md` — skill instructions with YAML frontmatter
+- `references/` — supplementary reference docs (per skill or shared)
 - `package.json` — npm package config
-- `project.json` — Nx project config (must have `type:plugin` tag)
-- `CLAUDE.md` and `AGENTS.md` — plugin-level agent instructions
-- `README.md` — plugin documentation
+- `project.json` — Nx project config (must have `type:skill-package` tag)
+
+### Installation (skills.sh)
+
+```bash
+# SDK skills (TypeScript developers)
+npx skills add piplabs/story-skills@story-sdk --full-depth
+
+# Smart contract skills (Solidity developers)
+npx skills add piplabs/story-skills@story-contracts
+```
 
 ### Versioning
 
-- `plugin.json` version tracks skill content changes (bump on any skill update)
+- `metadata.version` in SKILL.md tracks skill content changes
 - `package.json` version tracks npm package releases
 - Use conventional commits for changelogs
-- Release tags: `<plugin-name>@<version>`
+- Release tags: `<package-name>@<version>`
 
 ## Agent-Agnostic Design
 
 - Write prompts that work with any LLM, not just Claude
 - Avoid model-specific features in SKILL.md files
-- AGENTS.md symlinks to CLAUDE.md for non-Claude agent compatibility
 
 ## Evals Framework (Promptfoo)
 
@@ -61,8 +85,8 @@ Each skill has an eval suite at `evals/suites/<skill-name>/`:
 
 ## Validation
 
-- `node scripts/validate-plugin.cjs <plugin-dir>` — validates plugin structure
-- `node scripts/validate-docs.cjs` — ensures every plugin/skill has docs pages
+- `node scripts/validate-skill-package.cjs <package-dir>` — validates skill package structure
+- `node scripts/validate-docs.cjs` — ensures every package/skill has docs pages
 - CI runs both with `--require-evals` flag
 
 ## Story Protocol Context

@@ -5,8 +5,8 @@
   "description": "AI-powered skills and plugins for Story Protocol",
   "license": "MIT",
   "workspaces": [
-    "packages/*",
-    "packages/plugins/*"
+    "story-sdk",
+    "story-contracts"
   ],
   "scripts": {
     "validate": "nx run-many -t validate",

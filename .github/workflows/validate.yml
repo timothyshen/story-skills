@@ -8,7 +8,7 @@ on:
 
 jobs:
   validate-plugins:
-    name: Validate Plugins
+    name: Validate Skill Packages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,12 +17,12 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - name: Validate all plugins
+      - name: Validate all skill packages
         run: |
-          for dir in packages/plugins/*/; do
+          for dir in story-sdk story-contracts; do
             if [ -d "$dir" ]; then
               echo "Validating $dir..."
-              node scripts/validate-plugin.cjs "$dir" --require-evals
+              node scripts/validate-skill-package.cjs "$dir" --require-evals
             fi
           done
 
@@ -68,7 +68,8 @@ jobs:
     if: |
       github.event_name == 'pull_request' &&
       (
-        contains(github.event.pull_request.changed_files, 'packages/plugins/') ||
+        contains(github.event.pull_request.changed_files, 'story-sdk/') ||
+        contains(github.event.pull_request.changed_files, 'story-contracts/') ||
         contains(github.event.pull_request.changed_files, 'evals/')
       )
     steps:
