@@ -6,7 +6,7 @@ model: opus
 license: MIT
 metadata:
   author: story-protocol
-  version: '1.0.0'
+  version: '0.1.0'
 ---
 
 # Story Protocol TypeScript SDK

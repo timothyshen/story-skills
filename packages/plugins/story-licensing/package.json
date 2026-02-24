@@ -1,6 +1,6 @@
 {
   "name": "@story-protocol/story-licensing",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "AI-powered assistance for Story Protocol licensing, PIL terms, and derivatives",
   "author": "Story Protocol <ai@story.foundation>",
   "license": "MIT",
