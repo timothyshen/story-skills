@@ -1,6 +1,6 @@
 # Story Protocol AI Skills
 
-AI-powered skills and plugins for [Story Protocol](https://story.foundation/) development. Built on the [skills.sh](https://skills.sh) ecosystem, modeled after [uniswap-ai](https://github.com/Uniswap/uniswap-ai).
+AI-powered skills and plugins for [Story Protocol](https://story.foundation/) development. Built on the [skills.sh](https://skills.sh) ecosystem
 
 ## Quick Start
 
