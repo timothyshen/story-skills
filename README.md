@@ -39,9 +39,14 @@ TypeScript SDK skills for Story Protocol development.
 
 Solidity smart contract skills for Story Protocol development.
 
-| Skill | Description |
-|-------|-------------|
-| `smart-contracts` | Contract interaction, Foundry testing, direct contract calls |
+| Area | Description |
+|------|-------------|
+| **Core Contracts** | IPAssetRegistry, LicensingModule, RoyaltyModule, DisputeModule, AccessController |
+| **SPG Workflows** | RegistrationWorkflows, DerivativeWorkflows, LicenseAttachmentWorkflows, RoyaltyWorkflows |
+| **Foundry Testing** | Fork testing against Story testnet/mainnet, boilerplate setup, test patterns |
+| **Permission Management** | AccessController patterns, IP Account permissions, module authorization |
+| **Contract Addresses** | Deployed addresses for Aeneid testnet and Mainnet |
+| **Multicall Patterns** | SPG built-in multicall vs Multicall3 limitations with SPGNFT minting |
 
 ## How It Works
 
