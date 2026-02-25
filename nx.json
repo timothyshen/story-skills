@@ -24,7 +24,7 @@
   "parallel": 5,
   "cacheDirectory": "node_modules/.cache/nx",
   "release": {
-    "projects": [],
+    "projects": ["story-sdk", "story-contracts"],
     "projectsRelationship": "independent",
     "version": {
       "conventionalCommits": true,

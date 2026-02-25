@@ -13,10 +13,10 @@ defaultTest:
   options:
     timeout: 120000
   vars:
-    skill_content: file://../../../packages/plugins/story-ip/skills/ip-registration/SKILL.md
-    contract_addresses: file://../../../packages/plugins/story-ip/skills/ip-registration/references/contract-addresses.md
-    metadata_standard: file://../../../packages/plugins/story-ip/skills/ip-registration/references/metadata-standard.md
-    registration_patterns: file://../../../packages/plugins/story-ip/skills/ip-registration/references/registration-patterns.md
+    skill_content: file://../../../story-sdk/ip-registration/SKILL.md
+    contract_addresses: file://../../../story-sdk/ip-registration/references/contract-addresses.md
+    metadata_standard: file://../../../story-sdk/ip-registration/references/metadata-standard.md
+    registration_patterns: file://../../../story-sdk/ip-registration/references/registration-patterns.md
 
 tests:
   - vars:

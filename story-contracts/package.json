@@ -1,0 +1,8 @@
+{
+  "name": "@story-protocol/story-contracts",
+  "version": "0.1.0",
+  "description": "AI skills for Story Protocol Solidity smart contract development",
+  "author": "Story Protocol <ai@story.foundation>",
+  "license": "MIT",
+  "files": ["SKILL.md", "references"]
+}

@@ -13,10 +13,10 @@ defaultTest:
   options:
     timeout: 120000
   vars:
-    skill_content: file://../../../packages/plugins/story-royalty/skills/royalty-integration/SKILL.md
-    royalty_system: file://../../../packages/plugins/story-royalty/skills/royalty-integration/references/royalty-system.md
-    payment_claiming: file://../../../packages/plugins/story-royalty/skills/royalty-integration/references/payment-claiming.md
-    revenue_distribution: file://../../../packages/plugins/story-royalty/skills/royalty-integration/references/revenue-distribution.md
+    skill_content: file://../../../story-sdk/royalty-integration/SKILL.md
+    royalty_system: file://../../../story-sdk/royalty-integration/references/royalty-system.md
+    payment_claiming: file://../../../story-sdk/royalty-integration/references/payment-claiming.md
+    revenue_distribution: file://../../../story-sdk/royalty-integration/references/revenue-distribution.md
 
 tests:
   - vars:
