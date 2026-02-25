@@ -17,8 +17,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "nx": "^20.0.0",
     "markdownlint-cli2": "^0.21.0",
+    "nx": "^22.4.0",
     "prettier": "^3.4.0",
     "vitepress": "^1.6.4"
   },
@@ -28,6 +28,8 @@
   },
   "packageManager": "npm@11.0.0",
   "overrides": {
-    "js-yaml": ">=4.1.1"
+    "js-yaml": ">=4.1.1",
+    "minimatch": ">=10.2.4",
+    "esbuild": ">=0.25.0"
   }
 }
