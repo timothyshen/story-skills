@@ -1,0 +1,8 @@
+{
+  "name": "story-contracts",
+  "description": "AI skills for Story Protocol Solidity smart contract development — Foundry testing, contract interactions, SPG workflows",
+  "version": "0.1.0",
+  "author": {
+    "name": "Story Protocol"
+  }
+}

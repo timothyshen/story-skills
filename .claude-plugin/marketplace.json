@@ -1,17 +1,34 @@
 {
-  "version": "2.0.0",
-  "packages": [
+  "name": "story-skills",
+  "owner": {
+    "name": "Story Protocol"
+  },
+  "metadata": {
+    "description": "AI-powered skills for Story Protocol development",
+    "version": "0.1.0"
+  },
+  "plugins": [
     {
       "name": "story-sdk",
-      "path": "story-sdk",
-      "description": "AI skills for Story Protocol TypeScript SDK development",
-      "skills": ["sdk-integration", "ip-registration", "licensing", "royalty-integration"]
+      "source": "./story-sdk",
+      "description": "AI skills for Story Protocol TypeScript SDK development — IP registration, licensing, royalties, and SDK integration",
+      "version": "0.1.0",
+      "license": "MIT",
+      "keywords": ["story-protocol", "sdk", "typescript", "ip-assets", "licensing", "royalty"],
+      "category": "development",
+      "homepage": "https://github.com/piplabs/story-skills",
+      "repository": "https://github.com/piplabs/story-skills"
     },
     {
       "name": "story-contracts",
-      "path": "story-contracts",
-      "description": "AI skills for Story Protocol Solidity smart contract development",
-      "skills": ["smart-contracts"]
+      "source": "./story-contracts",
+      "description": "AI skills for Story Protocol Solidity smart contract development — Foundry testing, contract interactions, SPG workflows",
+      "version": "0.1.0",
+      "license": "MIT",
+      "keywords": ["story-protocol", "solidity", "smart-contracts", "foundry"],
+      "category": "development",
+      "homepage": "https://github.com/piplabs/story-skills",
+      "repository": "https://github.com/piplabs/story-skills"
     }
   ]
 }

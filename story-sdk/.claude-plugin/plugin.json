@@ -1,0 +1,8 @@
+{
+  "name": "story-sdk",
+  "description": "AI skills for Story Protocol TypeScript SDK development — IP registration, licensing, royalties, and SDK integration",
+  "version": "0.1.0",
+  "author": {
+    "name": "Story Protocol"
+  }
+}
