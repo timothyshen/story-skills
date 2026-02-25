@@ -158,9 +158,11 @@ address ipId = IP_ASSET_REGISTRY.ipId(block.chainid, tokenContract, tokenId);
 Two separate metadata objects are required. See `references/metadata-standard.md` for the full specification.
 
 **IP Metadata** (Story's IPA standard):
+
 - `title`, `description`, `createdAt`, `creators[]`, `image`, `mediaUrl`, `ipType`, `tags`
 
 **NFT Metadata** (OpenSea ERC-721 standard):
+
 - `name`, `description`, `image`, `attributes[]`
 
 Both must be uploaded to IPFS and their SHA-256 hashes computed:

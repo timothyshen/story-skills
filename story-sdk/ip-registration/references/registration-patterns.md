@@ -2,7 +2,7 @@
 
 ## Decision Tree
 
-```
+```text
 Do you already have an ERC-721 NFT?
 ├── Yes → Use registerIpAsset with type: 'minted'
 └── No
@@ -32,6 +32,7 @@ const response = await client.ipAsset.registerIpAsset({
 ```
 
 **Requirements:**
+
 - Caller must own the NFT
 - NFT must not already be registered
 

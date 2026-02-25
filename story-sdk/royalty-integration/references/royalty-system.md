@@ -58,7 +58,7 @@ Story Protocol provides two royalty policies that determine how revenue flows th
 
 Under LAP, each ancestor in the derivative chain receives a percentage cut from **ALL downstream derivatives**, regardless of depth.
 
-```
+```text
 IPA1 (root, commercialRevShare: 5%)
   └── IPA2 (derivative, commercialRevShare: 10%)
         └── IPA3 (derivative of both)
@@ -76,7 +76,7 @@ When revenue is paid to IPA3:
 
 Under LRP, only **direct parent-child** relationships are enforced. Revenue flows one hop at a time.
 
-```
+```text
 IPA1 (root, commercialRevShare: 5%)
   └── IPA2 (derivative, commercialRevShare: 10%)
         └── IPA3 (derivative of IPA2)
@@ -110,13 +110,13 @@ The **royalty stack** is the total cumulative percentage of revenue that an IP A
 
 For LAP:
 
-```
+```text
 royaltyStack(IPA) = sum of commercialRevShare for each ancestor
 ```
 
 ### Example
 
-```
+```text
 IPA_Root: commercialRevShare = 5%
   ├── IPA_A: commercialRevShare = 10%
   │     └── IPA_C (derivative of IPA_Root and IPA_A)
@@ -137,7 +137,7 @@ IPA_Root: commercialRevShare = 5%
 
 ## Revenue Flow
 
-```
+```text
 External Payer
     │
     ▼

@@ -91,7 +91,7 @@ The **royalty stack** is the cumulative percentage of revenue that an IP Asset m
 
 ### Calculation Example
 
-```
+```text
 IPA1 (root) — sets commercialRevShare: 5%
   └── IPA2 (derivative of IPA1) — sets commercialRevShare: 10%
         └── IPA3 (derivative of both IPA1 and IPA2)

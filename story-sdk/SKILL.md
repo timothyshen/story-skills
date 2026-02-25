@@ -40,8 +40,8 @@ const client = StoryClient.newClient(config);
 
 | Network | Chain ID | RPC |
 |---------|----------|-----|
-| Aeneid (testnet) | 1315 | https://aeneid.storyrpc.io |
-| Mainnet | 1514 | https://mainnet.storyrpc.io |
+| Aeneid (testnet) | 1315 | <https://aeneid.storyrpc.io> |
+| Mainnet | 1514 | <https://mainnet.storyrpc.io> |
 
 ## Key Contracts
 

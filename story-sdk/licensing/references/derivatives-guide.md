@@ -169,7 +169,7 @@ const response = await client.ipAsset.registerDerivativeIpAsset({
 
 ## Decision Tree
 
-```
+```text
 Want to create a derivative IP?
 ├── Already have a registered child IP?
 │   ├── Have license tokens? → Pattern 2 (burn tokens)

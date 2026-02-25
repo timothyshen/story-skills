@@ -2,6 +2,7 @@
   "name": "story-skills",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "AI-powered skills and plugins for Story Protocol",
   "license": "MIT",
   "workspaces": [
@@ -27,7 +28,6 @@
   },
   "packageManager": "npm@11.0.0",
   "overrides": {
-    "js-yaml": ">=4.1.1",
-    "esbuild": ">=0.25.0"
+    "js-yaml": ">=4.1.1"
   }
 }

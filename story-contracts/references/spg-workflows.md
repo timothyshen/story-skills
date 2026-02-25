@@ -456,7 +456,7 @@ function batchMintAndRegister(
 
 The standard Multicall3 at `0xcA11bde05977b3631167028862bE2a173976CA11` breaks SPGNFT minting for the following reason:
 
-```
+```text
 User EOA
   └── calls Multicall3.aggregate3()
         └── delegatecall RegistrationWorkflows.mintAndRegisterIp()

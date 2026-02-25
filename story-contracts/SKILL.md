@@ -24,7 +24,7 @@ Story Protocol contracts are organized into two layers:
 
 **Registries** store state (IP assets, licenses, modules). **Modules** execute logic (licensing, royalties, disputes). The **AccessController** gates which addresses can call which module functions on behalf of an IP Account.
 
-```
+```text
                 ┌─────────────────────────────────────┐
                 │         SPG Workflow Contracts       │
                 │  (RegistrationWorkflows, Derivative  │
