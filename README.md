@@ -1,22 +1,52 @@
 # Story Protocol AI Skills
 
-AI-powered skills and plugins for [Story Protocol](https://story.foundation/) development. Built on the [skills.sh](https://skills.sh) ecosystem, modeled after [uniswap-ai](https://github.com/Uniswap/uniswap-ai).
+AI-powered skills for [Story Protocol](https://story.foundation/) development. Available on the [skills.sh](https://skills.sh) ecosystem and [Claude Code](https://claude.com/claude-code) marketplace.
 
 ## Quick Start
 
+### Claude Code (plugin marketplace)
+
 ```bash
-npx skills add timothyshen/story-skills
+/plugin marketplace add piplabs/story-skills
+/plugin install story-sdk@story-skills
+/plugin install story-contracts@story-skills
 ```
 
-## Plugins
+### Skills CLI (skills.sh)
 
-| Plugin | Skill | Description |
-|--------|-------|-------------|
-| **story-ip** | `ip-registration` | Register IP assets via IPAssetRegistry or SPG workflows |
-| **story-licensing** | `licensing` | Configure PIL license terms, attach licenses, register derivatives |
-| **story-royalty** | `royalty-integration` | Pay and claim royalties with LAP/LRP policies |
-| **story-sdk** | `sdk-integration` | TypeScript SDK setup, client initialization, and usage patterns |
-| **story-contracts** | `smart-contracts` | Solidity contract interaction, Foundry testing, direct contract calls |
+```bash
+# SDK skills (TypeScript developers)
+npx skills add piplabs/story-skills@story-sdk --full-depth
+
+# Smart contract skills (Solidity developers)
+npx skills add piplabs/story-skills@story-contracts
+```
+
+## Packages
+
+### story-sdk
+
+TypeScript SDK skills for Story Protocol development.
+
+| Skill | Description |
+|-------|-------------|
+| `sdk-integration` | SDK setup, client initialization, and usage patterns |
+| `ip-registration` | Register IP assets, mint NFTs, SPG workflows |
+| `licensing` | PIL license terms, derivatives, license tokens |
+| `royalty-integration` | Royalty vaults, revenue claiming, payment flows |
+
+### story-contracts
+
+Solidity smart contract skills for Story Protocol development.
+
+| Area | Description |
+|------|-------------|
+| **Core Contracts** | IPAssetRegistry, LicensingModule, RoyaltyModule, DisputeModule, AccessController |
+| **SPG Workflows** | RegistrationWorkflows, DerivativeWorkflows, LicenseAttachmentWorkflows, RoyaltyWorkflows |
+| **Foundry Testing** | Fork testing against Story testnet/mainnet, boilerplate setup, test patterns |
+| **Permission Management** | AccessController patterns, IP Account permissions, module authorization |
+| **Contract Addresses** | Deployed addresses for Aeneid testnet and Mainnet |
+| **Multicall Patterns** | SPG built-in multicall vs Multicall3 limitations with SPGNFT minting |
 
 ## How It Works
 
@@ -32,19 +62,21 @@ Each skill provides curated guidance, code examples, contract addresses, and com
 
 ## Project Structure
 
-```
+```text
 story-skills/
-├── packages/plugins/
-│   ├── story-ip/                 # IP registration + metadata
-│   ├── story-licensing/          # Licensing + derivatives
-│   ├── story-royalty/            # Royalties + revenue
-│   ├── story-sdk/                # TypeScript SDK patterns
-│   └── story-contracts/          # Solidity / direct contract calls
+├── story-sdk/                    # TypeScript SDK skill package
+│   ├── SKILL.md                  # Umbrella skill (setup + routing)
+│   ├── sdk-integration/          # SDK methods and patterns
+│   ├── ip-registration/          # IP Asset registration
+│   ├── licensing/                # License terms and derivatives
+│   └── royalty-integration/      # Royalties and revenue
+├── story-contracts/              # Solidity skill package
+│   ├── SKILL.md                  # Smart contract skill
+│   └── references/               # Contract reference docs
 ├── evals/                        # Promptfoo evaluation suites
 ├── docs/                         # VitePress documentation
 ├── scripts/                      # Validation scripts
-├── CLAUDE.md                     # Agent instructions
-└── nx.json                       # Nx monorepo config
+└── .claude-plugin/               # Claude Code marketplace config
 ```
 
 ## Development
@@ -57,7 +89,7 @@ story-skills/
 ### Setup
 
 ```bash
-git clone https://github.com/timothyshen/story-skills.git
+git clone https://github.com/piplabs/story-skills.git
 cd story-skills
 npm install
 ```
@@ -65,14 +97,17 @@ npm install
 ### Validate
 
 ```bash
-# Validate all plugins
+# Validate all skill packages
 npx nx run-many -t validate
 
-# Validate a specific plugin
-npx nx run story-ip:validate
+# Validate a specific package
+npx nx run story-sdk:validate
 
-# Validate documentation pages
-node scripts/validate-docs.cjs
+# Lint markdown
+npx nx run-many -t lint-markdown
+
+# Validate Claude Code marketplace
+claude plugin validate .
 ```
 
 ### Run Evals
